@@ -1,9 +1,12 @@
 import React from "react";
 
-const ChecklistItem = () => {
+const ChecklistItem = ({item}) => {
+
+	let { id, name, quantity, packed }  = item
+
 	return (
 		<div>
-			<h5>item</h5>
+			<h5>{`${name}`}</h5>
 		</div>
 	);
 };
