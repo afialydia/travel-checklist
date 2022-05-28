@@ -1,11 +1,11 @@
 import "./App.css";
 import Checklist from "./components/checklist";
-import Form from "./components/form";
+import NewItemForm from "./components/newItemForm";
 
 function App() {
 	return (
 		<div className="App">
-			<Form />
+			<NewItemForm />
 			<Checklist />
 		</div>
 	);
