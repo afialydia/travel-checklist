@@ -1,26 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleItemPacked } from "../../redux/checklist/checklist.actions";
 
 const ChecklistItem = ({ item }) => {
+	const dispatch = useDispatch();
 	let { id, name, quantity, packed } = item;
 
-	const [isPacked, setIsPacked] = useState(packed);
-	console.log(item);
-
 	const handleChange = (e) => {
-		setIsPacked(e.target.value);
+		dispatch(toggleItemPacked(id));
 	};
 
+	console.log(packed);
 	return (
-		<div>
+		<div key={id}>
 			<input
 				type="checkbox"
-				value={packed}
 				onChange={handleChange}
-				name="newItem"
-				required
+				name="packedValue"
+				checked={packed}
 			/>
 			<h5>{`${name} ${quantity}`}</h5>
-			
 		</div>
 	);
 };
