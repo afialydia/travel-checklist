@@ -1,14 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { selectChecklistItems } from "../../redux/checklist/checklist.selectors";
 import ChecklistItem from "./checklistItem";
 
 const Checklist = () => {
-	let items = [
-		{ id: 1, name: "robe", quantity: 3, packed: false },
-		{ id: 2, name: "robe", quantity: 3, packed: false },
-		{ id: 3, name: "robe", quantity: 3, packed: false },
-		{ id: 4, name: "item", quantity: 3, packed: false },
-	];
+	const items = useSelector(selectChecklistItems)
 
 	return (
 		<div>
