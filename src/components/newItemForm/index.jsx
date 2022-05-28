@@ -4,7 +4,7 @@ import { addItem } from "../../redux/checklist/checklist.actions";
 
 function Form() {
 	const dispatch = useDispatch();
-	const initialState = { name: "", quantity: 0 };
+	const initialState = { name: "", quantity: null };
 	const [newItem, setNewItem] = useState(initialState
 	);
 	const { name, quantity } = newItem;
@@ -34,6 +34,9 @@ function Form() {
 				value={name}
 				onChange={handleChange}
 				name="name"
+				placeholder="I should bring a..."
+				label="item name"
+				aria-label="Item Name"
 				required
 			/>{" "}
 			<input
@@ -43,6 +46,7 @@ function Form() {
 				value={parseInt(quantity)}
 				onChange={handleChange}
 				name="quantity"
+				placeholder="0"
 				required
 			/>{" "}
 			<button
@@ -58,8 +62,8 @@ function Form() {
 			<button
 				type="button"
 				onClick={() =>
-					parseInt(quantity) === 0
-						? 0
+					parseInt(quantity) === 1
+						? 1
 						: setNewItem({ ...newItem, quantity: quantity - 1 })
 				}
 			>
