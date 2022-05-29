@@ -7,12 +7,17 @@ import {
 	selectTotalItems,
 } from "../../redux/checklist/checklist.selectors";
 
+//This file holds the Checklist component. This component acts as a container for the actual checklist items which are pulled in from redux state using the react-redux useSelector hook.
+
 const Checklist = () => {
 	const items = useSelector(selectChecklistItems);
+
+	//These slices are used to tell user how many of the items on the checklist have actually been packed
 	const totalItems = useSelector(selectTotalItems);
 	const totalPacked = useSelector(selectItemsPackedTotal);
 
 	const PackingStatus = () => {
+		//this nested if statement ensures that if a user has packed all items they recieve confirmation.
 		if (totalItems > 1) {
 			if (totalPacked === totalItems) {
 				return <h2 className="text-xl">All Packed - Enjoy your Trip!</h2>;
@@ -35,6 +40,8 @@ const Checklist = () => {
 			</div>
 			<div className="overflow-hidden mt-1">
 				<div className="overflow-auto max-h-[225px] md:max-h-[325px] ">
+
+					
 					<table className="table-auto border-collapse w-full text-left h-full">
 						<thead>
 							<tr>
@@ -44,6 +51,8 @@ const Checklist = () => {
 							</tr>
 						</thead>
 						<tbody>
+							{/* items are mapped over and distributed to individual
+							ChecklistItems. */}
 							{items.map((item) => (
 								<ChecklistItem item={item} key={item.id} />
 							))}

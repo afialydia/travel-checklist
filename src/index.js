@@ -9,6 +9,8 @@ import "./index.css";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
+//The app is wrapped in the persistor and store then rendered on the root
+
 root.render(
 	<Provider store={store}>
 		<PersistGate persistor={persistor}>
