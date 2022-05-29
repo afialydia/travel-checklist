@@ -11,9 +11,7 @@
 _**Travel Checklist**_ was created to help end users manage their packing list prior to taking a trip. With this application, users can:
 * _Add new items to their travel checklist_
 * _View all checklist items and mark whether or not they've been packed_
-<!-- * _Remove items from the checklist as needed_
-* _Access the checklist over_ 
-* _Print out a copy of the checklist_ -->
+
 
 ## Technologies Used
 
@@ -21,7 +19,7 @@ _**Travel Checklist**_ was created to help end users manage their packing list p
 * _[React-Redux](https://react-redux.js.org/)_
 * _[Redux](https://redux.js.org/)_
 * _[Redux-Logger](https://www.npmjs.com/package/redux-logger)_
-* _[Redux-Persist](https://github.com/rt2zz/redux-persist)_<!-- * _[Redux-thunk](https://www.npmjs.com/package/redux-thunk)_* _[Reselect](https://github.com/reduxjs/reselect)_ -->
+* _[Redux-Persist](https://github.com/rt2zz/redux-persist)_
 
 ## Setup/Installation Requirements
 
