@@ -6,21 +6,34 @@ const ChecklistItem = ({ item }) => {
 	const dispatch = useDispatch();
 	let { id, name, quantity, packed } = item;
 
-	const handleChange = (e) => {
+	const handleChange = () => {
 		dispatch(toggleItemPacked(id));
 	};
 
-	console.log(packed);
 	return (
-		<div key={id}>
-			<input
-				type="checkbox"
-				onChange={handleChange}
-				name="packedValue"
-				checked={packed}
-			/>
-			<h5>{`${name} ${quantity}`}</h5>
-		</div>
+		<tr
+			key={id}
+			className="w-full hover:bg-gray-300
+		 		rounded-lg cursor-pointer"
+			htmlFor={id}
+			onClick={() => handleChange()}
+		>
+			<td className="pl-5">
+				<label htmlFor={id}>
+					<input
+						type="checkbox"
+						onChange={handleChange}
+						name="packedValue"
+						title={name}
+						checked={packed}
+						id={id}
+					/>
+				</label>
+			</td>
+
+			<td className="pl-5">{`x ${quantity} `}</td>
+			<td>{`${name}`}</td>
+		</tr>
 	);
 };
 
