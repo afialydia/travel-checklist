@@ -20,6 +20,8 @@ _**Travel Checklist**_ was created to help end users manage their packing list p
 * _[Redux](https://redux.js.org/)_
 * _[Redux-Logger](https://www.npmjs.com/package/redux-logger)_
 * _[Redux-Persist](https://github.com/rt2zz/redux-persist)_
+* _[Reselect](https://github.com/reduxjs/reselect)_
+* _[Tailwind](https://tailwindcss.com/)_
 
 ## Setup/Installation Requirements
 
@@ -30,7 +32,7 @@ _**Travel Checklist**_ was created to help end users manage their packing list p
 
 ## Known Bugs
 
-_No known bugs at the moment._
+_No known bugs, but would like to rebuild using Redux Toolkit._
 
 ## Support & Ownership
 
