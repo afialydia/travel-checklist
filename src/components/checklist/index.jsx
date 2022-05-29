@@ -18,7 +18,7 @@ const Checklist = () => {
 
 	const PackingStatus = () => {
 		//this nested if statement ensures that if a user has packed all items they recieve confirmation.
-		if (totalItems > 1) {
+		if (totalItems >= 1) {
 			if (totalPacked === totalItems) {
 				return <h2 className="text-xl">All Packed - Enjoy your Trip!</h2>;
 			} else {
