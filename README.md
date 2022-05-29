@@ -25,10 +25,22 @@ _**Travel Checklist**_ was created to help end users manage their packing list p
 
 ## Setup/Installation Requirements
 
+This app was built using create-react-app (CRA). Follow the steps below to setup the project with the proper dependencies. You will not need to install CRA in order to make this app work.
 
- _To Be Completed at MVP_
+#### Option 1 - Fork the Repo
 
-<!-- _{Do I need to run a server? How should I set up my databases? Is there other code this application depends on? Delete the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_ -->
+1. Create a forked copy of this project.
+2. Clone your OWN version of the repository in your terminal.
+3. Download project dependencies by running one of these two commands `yarn` or `npm install`
+4. Run `yarn start` or `npm start` to start the development server.
+5. Take a peak under the hood 👩🏾‍🔧
+
+#### Option 2 - Clone this Repo
+
+1. Clone down this version of the repository in your terminal.
+2. Download project dependencies by running one of these two commands `yarn` or `npm install`
+3. Run `yarn start` or `npm start` to start the development server.
+4. Take a peak under the hood 👩🏾‍🔧
 
 ## Known Bugs
 
