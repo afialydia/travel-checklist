@@ -7,7 +7,7 @@ export const checklistReducer = (state = initialState, action) => {
 		case "ADD_ITEM":
 			return {
 				...state,
-				checklistItems: [...state.checklistItems, action.payload],
+				checklistItems: [action.payload, ...state.checklistItems],
 			};
 
 		case "TOGGLE_ITEM_PACKED":
@@ -22,14 +22,6 @@ export const checklistReducer = (state = initialState, action) => {
 						: item;
 				}),
 			};
-
-		// case "CLEAR_ITEMS":
-		// 	return {
-		// 		...state,
-		// 		checklist: state.checklist.filter(item => {
-		// 			return !item.packed;
-		// 		})
-		// 	};
 
 		default:
 			return state;
