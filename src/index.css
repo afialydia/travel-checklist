@@ -14,6 +14,4 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
-tbody {
-	height: 30vh !important;
-}
+
